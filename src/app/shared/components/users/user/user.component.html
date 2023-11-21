@@ -1,0 +1,18 @@
+
+
+<p class="userCss">
+   This is User  
+   <strong>{{singleUser.userName}} </strong> having UserId is
+    <strong>{{singleUser.userId}}</strong> and Status is 
+    <strong>{{singleUser.editStatus}}</strong>
+</p>
+<div class="btns">
+    <button mat-raised-button color="primary"
+    (click)="onEditBtn()"
+    >Edit User</button>
+
+    <button mat-raised-button color="warn"
+    (click)="onRemove(singleUser.userId)"
+    >Remove User</button>
+
+</div>

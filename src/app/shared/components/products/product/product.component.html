@@ -1,0 +1,22 @@
+
+
+<div class="card">
+    <div class="card-body">
+        <p>
+            This is product  
+            <strong>{{pObj.prodName}} </strong> having ProductId is
+             <strong>{{pObj.prodId}}</strong> and Status is 
+             <strong>{{pObj.ProdStatus}}</strong>
+        </p>
+    </div>
+</div>
+<div class="prodBtns">
+    <button mat-raised-button color="primary" type="button"
+    (click)="onEditProduct()"
+    >Edit product</button>
+    <button mat-raised-button color="warn" type="button"
+    (click)="removeProduct(pObj.prodId)"
+    >Remove product</button>
+</div>
+
+

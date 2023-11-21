@@ -1,0 +1,29 @@
+
+.formSec{
+    width: 100%;
+    height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    background-image: url('https://source.unsplash.com/random');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+
+  
+}
+.logInform{
+    width: 500px;
+    height: 200px;
+    .card{
+        background: none;
+        border: none;
+    }
+}

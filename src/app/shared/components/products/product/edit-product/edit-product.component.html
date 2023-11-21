@@ -1,0 +1,36 @@
+
+
+<div class="form-group">
+    <input type="text" class="form-control" 
+    [value]="prodObj ? prodObj.prodName : '' " 
+    [disabled]="!canEdit"
+    #pName>
+</div>
+<select name="" id="" class="form-control" 
+[value]="prodObj ? prodObj.ProdStatus : '' " 
+[disabled]="!canEdit"
+#pStatus
+>
+    <option value="" >Product Status</option>
+    <option value="InProcess" >InProcess</option>
+    <option value="Dispatched" >Dispatched</option>
+    <option value="Delivered" >Delivered</option>
+</select>
+
+<div class="text-center mt-4">
+
+
+    <button mat-raised-button color="accent" type="button"
+    (click)="onUpdate(pName.value,pStatus)" 
+    *ngIf="prodId ;  else addNew" 
+    [disabled]="!canEdit"
+    >Update Details</button>
+
+      <ng-template #addNew>
+        <button mat-raised-button color="accent" type="submit"
+        (click)="onSubmit(pName,pStatus)"
+       
+        >Submit </button>
+    </ng-template>
+  
+</div>

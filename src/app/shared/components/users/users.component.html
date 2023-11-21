@@ -1,0 +1,30 @@
+
+<div class="row mt-5">
+    <div class="col-md-6">
+        <ul class="list-group">
+            <li class="list-group-item" 
+            *ngFor="let user of usersInfo; let firstItem = first"
+            [routerLink]="['/users',user.userId]"
+            [queryParams]="{editUser:user.editStatus}"
+            (click)="isSelected = user.userId"
+            [ngClass]="
+            {
+                'active' : isSelected === user.userId || firstItem && !isSelected
+            }"
+            >
+                {{user.userName}}
+            </li>
+        </ul>
+
+        <div class="text-center mt-4">
+            <button mat-raised-button color="primary" type="button"
+            [routerLink]="['/users' , 'addUser']"
+            >Add User</button>
+        </div>
+    </div>
+
+
+    <div class="col-md-6">
+            <router-outlet></router-outlet>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+mat-icon{
+    cursor: pointer;
+}
+ a:hover{
+    cursor: pointer;
+    background-color: blue;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navToolbar{
+    display: flex;
+    justify-content: space-between;
+   
+    .navItems a{
+      
+       margin-left: 15px;
+       
+    }
+}
