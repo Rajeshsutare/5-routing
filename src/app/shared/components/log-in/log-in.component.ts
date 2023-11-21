@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Form, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Form, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { CustomRegex } from '../../regex/regex';
 import { AuthService } from '../../services/auth.service';
 import { SnackBarService } from '../../services/snack-bar.service';
@@ -10,7 +10,7 @@ import { SnackBarService } from '../../services/snack-bar.service';
   styleUrls: ['./log-in.component.scss']
 })
 export class LogInComponent implements OnInit {
-
+@ViewChild('logInForm') logInForm !:NgForm;
   constructor(private _authService:AuthService,
   
     ) { }
@@ -20,6 +20,8 @@ export class LogInComponent implements OnInit {
   }
 
   onLogIn(username:string,password:string){
+    console.log(this.logInForm.value);
+    
     this._authService.logInToApp(username,password)
   }
 
