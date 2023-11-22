@@ -11,6 +11,8 @@ import { SnackBarService } from '../../services/snack-bar.service';
 })
 export class LogInComponent implements OnInit {
 @ViewChild('logInForm') logInForm !:NgForm;
+public isHavingAcc :boolean=false;
+@ViewChild('signUpForm') signUpForm !: NgForm;
   constructor(private _authService:AuthService,
   
     ) { }
@@ -24,6 +26,9 @@ export class LogInComponent implements OnInit {
     
     this._authService.logInToApp(username,password)
   }
-
+  onSignIn(){
+    console.log(this.signUpForm.value);
+    
+  }
 
 }
