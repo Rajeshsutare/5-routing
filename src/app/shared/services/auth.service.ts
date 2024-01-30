@@ -26,7 +26,7 @@ export class AuthService {
   }
 
   logInToApp(username:string,password:string){
-    if(username === 'raj@gmail.com' && password === 'zaq1ZAQ!'){
+    if(username === 'raja@gmail.com' && password === 'zaq1ZAQ!'){
       localStorage.setItem('Token','JWT Token')
       localStorage.setItem('userrole','admin')
       this.logInStatus=true;

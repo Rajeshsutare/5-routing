@@ -1,17 +1,8 @@
 
-.box{
-    background-color: #133;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-size: 50px;   
+
+h1 {
+
+   text-shadow: 0 0 3px #fff, 0 0 5px #000;
+
 }
 
-@media all and (max-width:600px){
-    .box{
-        font-size: 20px;
-        height: 100vh;
-    }
-}
