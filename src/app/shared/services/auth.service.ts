@@ -26,7 +26,7 @@ export class AuthService {
   }
 
   logInToApp(username:string,password:string){
-    if(username === 'raja@gmail.com' && password === 'zaq1ZAQ!'){
+    if(username === 'raj@gmail.com' && password === 'zaq1ZAQ!'){
       localStorage.setItem('Token','JWT Token')
       localStorage.setItem('userrole','admin')
       this.logInStatus=true;
@@ -38,7 +38,7 @@ export class AuthService {
       this.logInStatus=true;
       this._router.navigate(['home'])
         this._snackBarService.openSnackBar('Logged In Successfully...','close')
-    }else if (username === 'pooja@gmail.com' && password === 'zaq1ZAQ!'){
+    }else if (username === 'Rj@gmail.com' && password === 'zaq1ZAQ!'){
       localStorage.setItem('Token','JWT Token')
       localStorage.setItem('userrole','superadmin')
       this.logInStatus=true;
